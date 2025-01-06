@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get "/apartments", to: "apartments#index"
-  resource :apartments
+  root "apartments#index"
+
+  resources :apartments
 end

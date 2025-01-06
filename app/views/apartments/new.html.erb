@@ -1,0 +1,43 @@
+<h2>New apartment</h2>
+
+<%= form_with model: @apartment do |form| %>
+  <div>
+    <%= form.label :unit_name %>
+    <%= form.text_field :unit_name, :required => true %>
+  </div>
+  <div>
+    <%= form.label :address %>
+    <%= form.text_field :address, :required => true %>
+  </div>
+  <div>
+    <%= form.label :city %>
+    <%= form.text_field :city, :required => true %>
+  </div>
+  <div>
+    <%= form.label :state %>
+    <%= form.text_field :state, :required => true %>
+  </div>
+  <div>
+    <%= form.label :bed_count %>
+    <%= form.text_field :bed_count, :required => true %>
+  </div>
+  <div>
+    <%= form.label :bath_count %>
+    <%= form.text_field :bath_count, :required => true %>
+  </div>
+  <div>
+    <%= form.label :sqft %>
+    <%= form.text_field :sqft %>
+  </div>
+  <div>
+    <%= form.label :rent %>
+    <%= form.text_field :rent %>
+  </div>
+  <div>
+    <%= form.label :date_available %>
+    <%= form.text_field :date_available %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
