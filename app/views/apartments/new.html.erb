@@ -1,41 +1,42 @@
 <h2 class="text-2xl font-semibold">New apartment</h2>
+<% input_class = "border rounded-md" %>
 
 <%= form_with model: @apartment do |form| %>
   <div>
-    <%= form.label :unit_name %>
-    <%= form.text_field :unit_name, :required => true %>
+    <%= form.label :unit_name %>*
+    <%= form.text_field :unit_name, :required => true, class: input_class %>
   </div>
   <div>
-    <%= form.label :address %>
-    <%= form.text_field :address, :required => true %>
+    <%= form.label :address %>*
+    <%= form.text_field :address, :required => true, class: input_class %>
   </div>
   <div>
-    <%= form.label :city %>
-    <%= form.text_field :city, :required => true %>
+    <%= form.label :city %>*
+    <%= form.text_field :city, :required => true, class: input_class %>
   </div>
   <div>
-    <%= form.label :state %>
-    <%= form.text_field :state, :required => true %>
+    <%= form.label :state %>*
+    <%= form.text_field :state, :required => true, class: input_class %>
   </div>
   <div>
-    <%= form.label :bed_count %>
-    <%= form.text_field :bed_count, :required => true %>
+    <%= form.label :bed_count %>*
+    <%= form.text_field :bed_count, :required => true, class: input_class %>
   </div>
   <div>
-    <%= form.label :bath_count %>
-    <%= form.text_field :bath_count, :required => true %>
+    <%= form.label :bath_count %>*
+    <%= form.text_field :bath_count, :required => true, class: input_class %>
   </div>
   <div>
     <%= form.label :sqft %>
-    <%= form.text_field :sqft %>
+    <%= form.text_field :sqft, class: input_class %>
   </div>
   <div>
     <%= form.label :rent %>
-    <%= form.text_field :rent %>
+    <%= form.text_field :rent, class: input_class %>
   </div>
   <div>
     <%= form.label :date_available %>
-    <%= form.text_field :date_available %>
+    <%= form.text_field :date_available, class: input_class %>
   </div>
   <div>
     <%= form.submit %>
