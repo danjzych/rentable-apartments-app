@@ -19,7 +19,8 @@ Apartment.create!(
   bath_count: BigDecimal("2.0"),
   sqft: 1200,
   rent: 1600,
-  date_available: Date.new(2025, 2, 1)
+  date_available: Date.new(2025, 2, 1),
+  concession_value: 100
 )
 
 Apartment.create!(
@@ -31,5 +32,6 @@ Apartment.create!(
   bath_count: BigDecimal("1.0"),
   sqft: 650,
   rent: 950,
-  date_available: Date.new(2025, 3, 1)
+  date_available: Date.new(2025, 3, 1),
+  concession_value: 300
 )
