@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_06_013613) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_10_231422) do
   create_table "apartments", force: :cascade do |t|
     t.string "unit_name", null: false
     t.string "address", null: false
@@ -23,5 +23,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_06_013613) do
     t.date "date_available"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "concession_value"
   end
 end
