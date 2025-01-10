@@ -1,3 +1,51 @@
-<h2 class="text-2xl font-semibold"><%= @apartment.unit_name %></h2>
-<%= link_to "Back", apartments_path %>
-<%= link_to "Edit", edit_apartment_path(@apartment) %>
+<div class="flex flex-col items-center justify-end p-4 gap-8">
+    <div class="w-full flex justify-evenly items-center">
+        <div>
+            <h2 class="text-2xl font-semibold">Unit <%= @apartment.unit_name %></h2>
+            <p>
+                <%= @presenter.full_address %>
+            </p>
+        </div>
+        <% if @apartment.apartment_image %>
+        <%= image_tag @apartment.apartment_image, class: "mt-4 rounded-lg shadow-md max-w-sm w-full h-auto object-cover" %>
+        <% end %>
+    </div>
+    
+    <hr class="w-3/4 border-gray-200">
+
+    <table class="min-w-[50%] border-collapse">
+        <tbody>
+            <tr>
+                <th colspan="2" class="py-2 px-4 border border-gray-200 bg-gray-50 text-left">Unit Details</th>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border border-gray-200 font-medium">Bed Count:</td>
+                <td class="py-2 px-4 border border-gray-200"><%= @apartment.bed_count %></td>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border border-gray-200 font-medium">Bath Count:</td>
+                <td class="py-2 px-4 border border-gray-200"><%= @apartment.bath_count %></td>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border border-gray-200 font-medium">Square Footage:</td>
+                <td class="py-2 px-4 border border-gray-200"><%= @presenter.sqft %></td>
+            </tr>
+            <tr>
+                <th colspan="2" class="py-2 px-4 border border-gray-200 bg-gray-50 text-left">Leasing Information</th>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border border-gray-200 font-medium">Rent:</td>
+                <td class="py-2 px-4 border border-gray-200"><%= @presenter.rent %></td>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border border-gray-200 font-medium">Availability:</td>
+                <td class="py-2 px-4 border border-gray-200"><%= @presenter.availability %></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="flex justify-center gap-4">
+    <%= link_to "Back", apartments_path, class: "hover:underline" %>
+    <%= link_to "Edit", edit_apartment_path(@apartment), class: "hover:underline" %>
+</div>

@@ -5,6 +5,7 @@ class ApartmentsController < ApplicationController
     end
 
     def show
+        @presenter = ApartmentPresenter.new(@apartment)
     end
 
     def new
@@ -33,7 +34,7 @@ class ApartmentsController < ApplicationController
 
     private
     def apartment_params
-        params.expect(apartment: [ :unit_name,
+        params.require(:apartment).permit(:unit_name,
                                     :address,
                                     :city,
                                     :state,
@@ -41,7 +42,8 @@ class ApartmentsController < ApplicationController
                                     :bath_count,
                                     :sqft,
                                     :rent,
-                                    :date_available ])
+                                    :date_available,
+                                    :apartment_image)
     end
 
     def set_apartment

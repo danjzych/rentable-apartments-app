@@ -8,6 +8,9 @@ Apartment.create!(
   sqft: 850,
   rent: 1200,
   date_available: Date.new(2025, 1, 15)
+).apartment_image.attach(
+  io: File.open(Rails.root.join('app/assets/images/test_apartment_image.webp')),
+  filename: 'test_apartment_image.webp'
 )
 
 Apartment.create!(

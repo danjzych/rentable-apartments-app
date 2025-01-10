@@ -22,14 +22,16 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <header class="w-full p-3 mb-2 border-b-2 shadow-sm">
+  <body class="min-h-screen w-full flex flex-col gap-4">
+    <header class="w-full p-3 border-b-2 shadow-sm">
       <h1 class="text-3xl font-bold">
         ApartmentSearch
       </h1>
     </header>
-    <%= yield %>
-    <footer>
+    <main class="flex-grow">
+      <%= yield %>
+    </main>
+    <footer class="w-full p-4 mt-auto border-t">
       ApartmentSearch, founded 2025
     </footer>
   </body>
