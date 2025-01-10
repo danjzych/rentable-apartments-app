@@ -1,24 +1,22 @@
-# README
+# ApartmentSearch
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Apartment search is a mock apartment listing and search application used for Rentable interviews. You may be asked to review specific PRs in this repo as part of the interview process.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+To run this application, you'll need to have Ruby 3.3.4 installed.
 
-* System dependencies
+```
+rbenv install 3.3.4
+```
 
-* Configuration
+To run the application, you will need to run the following commands:
 
-* Database creation
+```
+bundle install
+bin/rails db:setup
+bin/setup
+bin/rails s
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If you are working with Tailwind and would like to recomplile your CSS on save, you will want to run `bin/dev` instead of `bin/rails s`.
