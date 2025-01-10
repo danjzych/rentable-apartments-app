@@ -41,6 +41,7 @@ class ApartmentsController < ApplicationController
                                     :bath_count,
                                     :sqft,
                                     :rent,
+                                    :concession_value,
                                     :date_available ])
     end
 
