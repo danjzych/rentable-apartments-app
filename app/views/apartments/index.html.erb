@@ -1,13 +1,15 @@
-<h2 class="text-2xl font-semibold">All Apartments: </h2>
+<div class="m-4 inline-flex flex-col gap-3">
+    <h2 class="text-2xl font-semibold">All Apartments: </h2>
 
-<%= link_to "New apartment", new_apartment_path %>
+    <ul class="list-disc list-inside">
+    <% @apartments.each do |apartment| %>
+        <li>
+            <a href="/apartments/<%= apartment.id %>">
+                <%= apartment.unit_name %>
+            </a>
+        </li>
+    <% end %>
+    </ul>
 
-<ul>
-<% @apartments.each do |apartment| %>
-    <li>
-        <a href="/apartments/<%= apartment.id %>">
-            <%= apartment.unit_name %>
-        </a>
-    </li>
-<% end %>
-</ul>
+    <%= link_to "New apartment", new_apartment_path, class: "hover:underline" %>
+</div>

@@ -19,12 +19,11 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <header>
+    <header class="w-full p-3 mb-2 border-b-2 shadow-sm">
       <h1 class="text-3xl font-bold">
         ApartmentSearch
       </h1>
