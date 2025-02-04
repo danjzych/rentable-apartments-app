@@ -1,3 +1,10 @@
 <h2 class="text-2xl font-semibold"><%= @apartment.unit_name %></h2>
+
+<div>
+  <p>Rent: $<%= @apartment.rent %></p>
+  <p>Square Feet: <%= @apartment.sqft %></p>
+  <p>Price per sqft: $<%= @apartment.get_price_per_sqft %></p>
+</div>
+
 <%= link_to "Back", apartments_path %>
 <%= link_to "Edit", edit_apartment_path(@apartment) %>
