@@ -9,7 +9,7 @@ one:
   bath_count: 9.99
   sqft: 1
   rent: 1
-  date_avaiable: 2025-01-05
+  date_available: 2025-01-05
 
 two:
   unit_name: MyString
@@ -20,4 +20,4 @@ two:
   bath_count: 9.99
   sqft: 1
   rent: 1
-  date_avaiable: 2025-01-05
+  date_available: 2025-01-05

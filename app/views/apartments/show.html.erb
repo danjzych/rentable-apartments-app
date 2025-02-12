@@ -1,3 +1,13 @@
 <h2 class="text-2xl font-semibold"><%= @apartment.unit_name %></h2>
+
+<ul>
+  <li>Rent: $<%= @apartment.rent %></li>
+  <li>Square Feet: <%= @apartment.sqft %></li>
+  <li>Price per sqft: $<%= @apartment.price_per_sqft %></li>
+  <li>Date Available: <%= @apartment.date_available %></li>
+  <li>Days on Market: <%= @apartment.days_on_market %></li>
+  <li>Vacant: <%= @apartment.vacant? %></li>
+</ul>
+
 <%= link_to "Back", apartments_path %>
 <%= link_to "Edit", edit_apartment_path(@apartment) %>
